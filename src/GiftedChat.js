@@ -191,20 +191,35 @@ class GiftedChat extends React.Component {
 
 
   renderMessages() {
+    const MessagesContainer = this.props.renderMessages;
+    if (MessagesContainer === undefined) {
+      return (
+        <div style={{
+          height: `calc(100% - ${this.state.composerHeight}px)`,
+          display: 'flex',
+        }}
+        >
+          <MessageContainer
+            {...this.props}
+            invertibleScrollViewProps={this.invertibleScrollViewProps}
+            messages={this.getMessages()}
+            ref={component => this._messageContainerRef = component}
+          />
+          {this.renderChatFooter()}
+        </div>
+      );
+    }
+
     return (
-      <div style={{
-        height: `calc(100% - ${this.state.composerHeight}px)`,
-        display: 'flex',
-      }}
-      >
+      <MessagesContainer>
         <MessageContainer
-          {...this.props}
-          invertibleScrollViewProps={this.invertibleScrollViewProps}
-          messages={this.getMessages()}
-          ref={component => this._messageContainerRef = component}
-        />
-        {this.renderChatFooter()}
-      </div>
+            {...this.props}
+            invertibleScrollViewProps={this.invertibleScrollViewProps}
+            messages={this.getMessages()}
+            ref={component => this._messageContainerRef = component}
+          />
+          {this.renderChatFooter()}
+      </MessagesContainer>
     );
   }
 
@@ -435,6 +450,7 @@ GiftedChat.propTypes = {
   renderSystemMessage: PropTypes.func,
   onLongPress: PropTypes.func,
   renderMessage: PropTypes.func,
+  renderMessages: PropTypes.func,
   renderMessageText: PropTypes.func,
   renderMessageImage: PropTypes.func,
   imageProps: PropTypes.object,
