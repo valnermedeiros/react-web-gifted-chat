@@ -1,27 +1,40 @@
 Arguments: 
-  /Users/johniak/.nvm/versions/node/v10.14.1/bin/node /usr/local/bin/yarn compile
+  /usr/bin/node /usr/bin/yarn publish
 
 PATH: 
-  /Users/johniak/Projects/react-web-gifted-chat/example/node_modules/.bin:/Users/johniak/.config/yarn/link/node_modules/.bin:/Users/johniak/Projects/react-web-gifted-chat/example/node_modules/.bin:/Users/johniak/.config/yarn/link/node_modules/.bin:/Users/johniak/.nvm/versions/node/v10.14.1/libexec/lib/node_modules/npm/bin/node-gyp-bin:/Users/johniak/.nvm/versions/node/v10.14.1/lib/node_modules/npm/bin/node-gyp-bin:/Users/johniak/.nvm/versions/node/v10.14.1/bin/node_modules/npm/bin/node-gyp-bin:/Users/johniak/.nvm/versions/node/v10.14.1/bin:/Users/johniak/Downloads/platform-tools:/usr/local/opt/ruby/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet
+  /home/valner/.rbenv/shims:/home/valner/.yarn/bin:/home/valner/.rbenv/shims:/home/valner/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/android-sdk/tools:/opt/android-sdk/tools/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin
 
 Yarn version: 
-  1.5.1
+  1.17.3
 
 Node version: 
-  10.14.1
+  12.9.1
 
 Platform: 
-  darwin x64
+  linux x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (/usr/lib/node_modules/yarn/lib/cli.js:136724:13)
+      at Interface.emit (events.js:209:13)
+      at Interface._ttyWrite (readline.js:887:16)
+      at ReadStream.onkeypress (readline.js:191:10)
+      at ReadStream.emit (events.js:209:13)
+      at emitKeys (internal/readline/utils.js:414:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1153:36)
+      at ReadStream.emit (events.js:209:13)
+      at addChunk (_stream_readable.js:305:12)
 
 npm manifest: 
   {
     "name": "react-web-gifted-chat",
-    "version": "0.6.4",
+    "version": "0.6.8",
     "description": "The most complete chat UI for React Web",
     "main": "dist/index.js",
     "repository": {
       "type": "git",
-      "url": "https://github.com/johniak/react-web-gifted-chat.git"
+      "url": "https://github.com/leonardomso/react-web-gifted-chat.git"
     },
     "keywords": [
       "react",
@@ -33,9 +46,9 @@ npm manifest:
     "author": "Jan Romaniak",
     "license": "MIT",
     "bugs": {
-      "url": "https://github.com/johniak/react-web-gifted-chat/issues"
+      "url": "https://github.com/leonardomso/react-web-gifted-chat/issues"
     },
-    "homepage": "https://github.com/johniak/react-web-gifted-chat#readme",
+    "homepage": "https://github.com/leonardomso/react-web-gifted-chat#readme",
     "scripts": {
       "lint": "eslint . --ext .js,.jsx",
       "compile": "export BABEL_ENV='production' && rm -rf ./dist && mkdir dist &&  rollup -c -i src/index.js -o dist/index.js"
@@ -4889,18 +4902,3 @@ Lockfile:
   yallist@^3.0.0, yallist@^3.0.2:
     version "3.0.3"
     resolved "https://registry.yarnpkg.com/yallist/-/yallist-3.0.3.tgz#b4b049e314be545e3ce802236d6cd22cd91c3de9"
-
-Trace: 
-  Error: Command failed.
-  Exit code: 1
-  Command: sh
-  Arguments: -c export BABEL_ENV='production' && rm -rf ./dist && mkdir dist &&  rollup -c -i src/index.js -o dist/index.js
-  Directory: /Users/johniak/Projects/react-web-gifted-chat
-  Output:
-  
-      at ProcessTermError.MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)
-      at new ProcessTermError (/usr/local/lib/node_modules/yarn/lib/cli.js:226:113)
-      at ChildProcess.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:30281:17)
-      at ChildProcess.emit (events.js:182:13)
-      at maybeClose (internal/child_process.js:962:16)
-      at Process.ChildProcess._handle.onexit (internal/child_process.js:251:5)

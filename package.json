@@ -1,11 +1,11 @@
 {
-  "name": "react-web-gifted-chat",
-  "version": "0.6.7",
+  "name": "react-web-gifted-chat-messages",
+  "version": "0.6.8",
   "description": "The most complete chat UI for React Web",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/johniak/react-web-gifted-chat.git"
+    "url": "https://github.com/valnermedeiros/react-web-gifted-chat.git"
   },
   "keywords": [
     "react",
@@ -17,9 +17,9 @@
   "author": "Jan Romaniak",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/johniak/react-web-gifted-chat/issues"
+    "url": "https://github.com/valnermedeiros/react-web-gifted-chat/issues"
   },
-  "homepage": "https://github.com/johniak/react-web-gifted-chat#readme",
+  "homepage": "https://github.com/valnermedeiros/react-web-gifted-chat#readme",
   "scripts": {
     "lint": "eslint . --ext .js,.jsx",
     "compile": "export BABEL_ENV='production' && rm -rf ./dist && mkdir dist &&  rollup -c -i src/index.js -o dist/index.js"
